@@ -1,0 +1,53 @@
+<header
+  id="#landing-header"
+  class="flex px-8 py-4 justify-between items-center w-full fixed top-0"
+>
+  <div class="flex flex-grow basis-0">
+    <h2 class="font-bold text-3xl text-js"><a href="#">SVAM</a></h2>
+  </div>
+  <nav class="font-medium text-gray-100 [&>ul>li]:px-3">
+    <ul class="flex gap-6">
+      <li><a href="#about">Sobre mi</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+  <div class="flex flex-grow basis-0 justify-end">
+    <button
+      class="px-3 py-1 font-semibold bg-gray-100 text-black hover:bg-js hover:border-js text-base border rounded-lg transition-colors"
+      >Descargar CV</button
+    >
+  </div>
+  <div
+    id="menu-backdrop"
+    class={`
+      absolute bg-js/60  rounded
+      left-[var(--left)] top-[var(--top)]
+      w-[var(--width)] h-[var(--height)]
+      transition-all duration-500
+      ease-in-out opacity-0 -z-10
+    `}
+  >
+  </div>
+</header>
+<script>
+  const listItem = document.querySelectorAll("nav ul li");
+  const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement;
+  listItem.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      const { left, top, width, height } = item.getBoundingClientRect();
+      menuBackDrop.style.setProperty("--left", `${left}px`);
+      menuBackDrop.style.setProperty("--top", `${top}px`);
+      menuBackDrop.style.setProperty("--width", `${width}px`);
+      menuBackDrop.style.setProperty("--height", `${height}px`);
+      menuBackDrop.style.opacity = "1";
+      menuBackDrop.style.visibility = "visible";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      menuBackDrop.style.opacity = "0";
+      menuBackDrop.style.visibility = "hidden";
+    });
+  });
+</script>
