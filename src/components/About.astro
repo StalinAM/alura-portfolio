@@ -1,10 +1,11 @@
 ---
-import Github from "./logos/Github.astro";
+import Github from "./logos/GitHub.astro";
 import Linkedin from "./logos/Linkedin.astro";
 ---
 
 <section
-  class="flex gap-4 justify-center h-full w-full text-gray-100 max-w-6xl mx-auto"
+  id="about"
+  class="flex gap-7 justify-center h-full w-full max-w-5xl mx-auto"
 >
   <div class="flex flex-col gap-5 justify-center">
     <header class="flex justify-start flex-col gap-1">
@@ -17,20 +18,20 @@ import Linkedin from "./logos/Linkedin.astro";
       atractivas.
     </p>
     <ul class="flex gap-4 [&>li>a]:w-7 [&>li>a]:inline-block">
-      <li>
+      <li class="group cursor-pointer">
         <a
-          class="transition hover:scale-125"
+          class="transition group-hover:scale-125"
           href="https://github.com/StalinAM"
           target="_blank"
         >
-          <Github color={"#fbae17"} />
+          <Github color="#fbae17" />
         </a>
       </li>
-      <li>
+      <li class="group">
         <a
-          class="transition hover:scale-125"
+          class="transition group-hover:scale-125"
           href="https://www.linkedin.com/in/stalin-acurio-915561248/"
-          target="_blank"><Linkedin color={"#fbae17"} /></a
+          target="_blank"><Linkedin color="#fbae17" /></a
         >
       </li>
     </ul>
