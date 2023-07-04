@@ -2,11 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import LandingHeader from "../components/LandingHeader.astro";
+import Skills from "../components/Skills.astro";
+import Projects from "../components/Projects.astro";
 ---
 
-<Layout title="Portafolio Stalin.">
-  <main class="w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth">
+<Layout title="Stalin Acurio">
+  <main
+    class="w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth text-gray-100"
+  >
     <LandingHeader />
     <About />
+    <Projects />
+    <Skills title="habilidades" />
+    <Skills title="aficiones" />
   </main>
 </Layout>
