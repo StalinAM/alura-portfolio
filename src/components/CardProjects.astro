@@ -1,21 +1,19 @@
 ---
-const { title, image, description, tools, web, repo } = Astro.props;
+const { id, title, image, description, tools, web, repo } = Astro.props;
 ---
 
-<li class="mb-32 ltr:ml-3 rtl:mr-3">
+<li class="mb-[100px]">
   <article class="grid grid-cols-11 items-center">
     <div
-      class="col-start-1 col-end-7 row-start-1 row-end-1 rounded overflow-hidden"
+      class=`${ id % 2 != 0? 'col-start-1 col-end-7' : 'col-start-6 col-end-12' } row-start-1 row-end-1 rounded overflow-hidden`
     >
       <a class="relative z-20 group" href={web} target="_blank">
-        <div
-          class="absolute top-0 left-0 w-full h-full bg-js/30 transition group-hover:opacity-0"
-        >
-        </div>
         <img class="object-cover w-full" src={image} alt={description} />
       </a>
     </div>
-    <div class="col-start-6 col-end-12 row-start-1 row-end-1 text-end">
+    <div
+      class=`${ id % 2 != 0? 'col-start-6 col-end-12 text-end' : 'col-start-1 col-end-7 text-start' }  row-start-1 row-end-1 `
+    >
       <header class="mb-5">
         <a class="inline-block relative" href={web} target="_blank">
           <h3 class="cursor-pointer text-4xl font-medium hover:text-js">
@@ -26,10 +24,10 @@ const { title, image, description, tools, web, repo } = Astro.props;
       <div class="relative bg-[#0d0c14] p-6 rounded text-lg text-gray-200 z-30">
         <p>{description}</p>
       </div>
-      <footer class="flex flex-col items-end mt-5 gap-4">
-        <ul
-          class="flex gap-5 items-center justify-end text-base text-slate-300"
-        >
+      <footer
+        class=`flex flex-col ${ id % 2 != 0? 'items-end' : '' }  mt-5 gap-4`
+      >
+        <ul class="flex gap-5 items-center text-base text-slate-300">
           {
             tools.map((item) => (
               <li>
