@@ -6,6 +6,10 @@ module.exports = {
       colors: {
         js: "#fbae17",
       },
+      gridTemplateColumns: {
+        "box-xl": "repeat(auto-fill, minmax(300px, 1fr))",
+        "box-x": "repeat(auto-fill, minmax(250px, 1fr))",
+      },
     },
   },
   plugins: [],
