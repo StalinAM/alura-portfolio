@@ -5,7 +5,7 @@
   <div class="flex flex-grow basis-0">
     <h2 class="font-bold text-3xl text-js"><a href="#">SVAM</a></h2>
   </div>
-  <nav class="font-medium text-gray-100 [&>ul>li]:px-3 [&>ul>li]:py-1">
+  <nav class="font-medium text-gray-100 [&>ul>li>a]:px-3 [&>ul>li>a]:py-1">
     <ul class="flex gap-6 [&>li]:cursor-pointer">
       <li><a href="#about">Sobre mi</a></li>
       <li><a href="#projects">Proyectos</a></li>
@@ -32,7 +32,7 @@
   </div>
 </header>
 <script>
-  const listItem = document.querySelectorAll("nav ul li");
+  const listItem = document.querySelectorAll("nav ul li a");
   const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement;
   listItem.forEach((item) => {
     item.addEventListener("mouseenter", () => {
