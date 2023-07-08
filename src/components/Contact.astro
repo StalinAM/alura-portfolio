@@ -1,0 +1,52 @@
+<section
+  id="contact"
+  class="pt-24 flex flex-col gap-4 w-full max-w-5xl mx-auto"
+>
+  <h3 class="text-3xl font-medium text-left mb-10 capitalize text-js">
+    Contacto
+  </h3>
+  <form
+    class="flex flex-col gap-6 bg-[#1D1A2D] [&>div]:flex [&>div]:flex-col [&>div]:gap-2 [&>div]:w-full w-2/3 mx-auto py-[1rem] px-[1.5rem] rounded"
+    action=""
+  >
+    <div>
+      <label class="text-sm" for="email">Correo electronico</label>
+      <input
+        class="p-2 text-js appearance-none border-gray-200 focus:outline-none focus:border-js rounded border-2 bg-transparent"
+        type="text"
+        name="email"
+        id=""
+      />
+    </div>
+    <div>
+      <label class="text-sm" for="name">Nombre</label>
+      <input
+        class="p-2 text-js appearance-none border-gray-300 focus:outline-none focus:border-js rounded border-2 bg-transparent"
+        type="text"
+        name="name"
+        id=""
+      />
+    </div>
+    <div>
+      <label class="text-sm" for="subject">Asunto</label>
+      <input
+        class="p-2 text-js appearance-none border-gray-300 focus:outline-none focus:border-js rounded border-2 bg-transparent"
+        type="text"
+        name="subject"
+        id=""
+      />
+    </div>
+    <div>
+      <label class="text-sm" for="message">Mensaje</label>
+      <textarea
+        class="p-2 text-js appearance-none border-gray-300 focus:outline-none focus:border-js rounded border-2 bg-transparent"
+        name="message"
+        rows="9"
+        id=""></textarea>
+    </div>
+    <button
+      class="block w-fit px-3 py-1 font-semibold bg-gray-100 text-black hover:bg-js hover:border-js text-base border rounded-lg transition-colors"
+      >Enviar mensaje</button
+    >
+  </form>
+</section>
