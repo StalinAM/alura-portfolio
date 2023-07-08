@@ -4,16 +4,27 @@ import About from "../components/About.astro";
 import LandingHeader from "../components/LandingHeader.astro";
 import Skills from "../components/Skills.astro";
 import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="Stalin Acurio">
+  <LandingHeader />
   <main
-    class="w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth text-gray-100 p-4"
+    class="w-full overflow-y-auto overflow-x-hidden scroll-smooth text-gray-100 p-4"
   >
-    <LandingHeader />
     <About />
     <Projects />
     <Skills title="habilidades" />
     <Skills title="aficiones" />
+    <Contact />
   </main>
+  <footer class="text-gray-100 w-full flex flex-col items-center p-6">
+    <p>
+      Desarrollado por <a
+        class="text-js"
+        href="https://github.com/StalinAM"
+        target="_blank">Stalin</a
+      >
+    </p>
+  </footer>
 </Layout>
