@@ -16,8 +16,9 @@
         type="text"
         name="email"
         placeholder="Ingresa su correo electrónico"
-        id=""
+        id="email-address"
       />
+      <span class="text-red-500 hidden">Correo no válido</span>
     </div>
     <div>
       <label class="text-sm" for="name">Nombre</label>
@@ -26,7 +27,7 @@
         type="text"
         name="name"
         placeholder="Ingrese su nombre"
-        id=""
+        id="name"
       />
     </div>
     <div>
@@ -36,7 +37,7 @@
         type="text"
         name="subject"
         placeholder="Ingrese el asunto del mensaje"
-        id=""
+        id="subject"
       />
     </div>
     <div>
@@ -46,7 +47,7 @@
         name="message"
         rows="9"
         placeholder="Ingrese el mensaje"
-        id=""></textarea>
+        id="message"></textarea>
     </div>
     <button
       class="block w-fit px-3 py-1 font-semibold bg-gray-100 text-black hover:bg-js hover:border-js text-base border rounded-lg transition-colors"
@@ -54,3 +55,26 @@
     >
   </form>
 </section>
+<script>
+  const email = document.querySelector("#email-address");
+  const emailSpan = document.querySelector("#email-address+span");
+  const name = document.querySelector("#name");
+  const subject = document.querySelector("#subject");
+  const message = document.querySelector("#message");
+  let regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  email.addEventListener("blur", () => {
+    console.log("hola");
+    emailSpan.classList.add("hidden");
+  });
+  email.addEventListener("input", () => {
+    if (!regexEmail.test(email.value)) {
+      email.classList.remove("focus:border-js");
+      email.classList.add("focus:border-red-500");
+      emailSpan.classList.remove("hidden");
+    } else {
+      email.classList.remove("focus:border-red-500");
+      email.classList.add("focus:border-js");
+      emailSpan.classList.add("hidden");
+    }
+  });
+</script>
