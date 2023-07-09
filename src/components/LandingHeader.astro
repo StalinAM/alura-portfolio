@@ -1,5 +1,5 @@
 <header
-  id="#landing-header"
+  id="landing-header"
   class="z-50 flex px-10 pt-6 pb-4 justify-between items-center w-full fixed top-0 left-0 bg-[#13111c]"
 >
   <div class="flex flex-grow basis-0">
@@ -34,6 +34,7 @@
 <script>
   const listItem = document.querySelectorAll("nav ul li a");
   const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement;
+  const header = document.querySelector("#landing-header") as HTMLElement;
   listItem.forEach((item) => {
     item.addEventListener("mouseenter", () => {
       const { left, top, width, height } = item.getBoundingClientRect();
@@ -49,5 +50,12 @@
       menuBackDrop.style.opacity = "0";
       menuBackDrop.style.visibility = "hidden";
     });
+  });
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 79) {
+      header.classList.add("shadow-[0px_10px_30px_-27px_#ffffff14]");
+    } else {
+      header.classList.remove("shadow-[0px_10px_30px_-27px_#ffffff14]");
+    }
   });
 </script>
