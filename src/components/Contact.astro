@@ -6,8 +6,7 @@
     Contacto
   </h3>
   <form
-    class="flex flex-col gap-6 bg-[#1D1A2D] [&>div]:flex [&>div]:flex-col [&>div]:gap-2 [&>div]:w-full w-2/3 mx-auto py-[3rem] px-[2rem] rounded"
-    action=""
+    class="flex flex-col gap-6 bg-[#1D1A2D] [&>div]:flex [&>div]:flex-col [&>div]:gap-2 [&>div]:w-full last:[&>div]:flex-row w-2/3 mx-auto py-[3rem] px-[2rem] rounded"
   >
     <div>
       <label class="text-sm" for="email">Correo electrónico</label>
@@ -23,51 +22,86 @@
     <div>
       <label class="text-sm" for="name">Nombre</label>
       <input
-        class="p-2 text-js appearance-none border-gray-300 focus:outline-none focus:border-js rounded border-2 bg-transparent text-lg"
+        class="p-2 text-js appearance-none border-gray-200 focus:outline-none focus:border-js rounded border-2 bg-transparent text-lg"
         type="text"
         name="name"
         placeholder="Ingrese su nombre"
         id="name"
       />
+      <span class="text-red-500 hidden">Nombre muy extenso</span>
     </div>
     <div>
       <label class="text-sm" for="subject">Asunto</label>
       <input
-        class="p-2 text-js appearance-none border-gray-300 focus:outline-none focus:border-js rounded border-2 bg-transparent text-lg"
+        class="p-2 text-js appearance-none border-gray-200 focus:outline-none focus:border-js rounded border-2 bg-transparent text-lg"
         type="text"
         name="subject"
         placeholder="Ingrese el asunto del mensaje"
         id="subject"
       />
+      <span class="text-red-500 hidden">Asunto muy extenso</span>
     </div>
     <div>
       <label class="text-sm" for="message">Mensaje</label>
       <textarea
-        class="p-2 text-js appearance-none border-gray-300 focus:outline-none focus:border-js rounded border-2 bg-transparent text-lg"
+        class="p-2 text-js appearance-none border-gray-200 focus:outline-none focus:border-js rounded border-2 bg-transparent text-lg"
         name="message"
         rows="9"
         placeholder="Ingrese el mensaje"
         id="message"></textarea>
+      <span class="text-red-500 hidden">Mensaje muy extenso</span>
     </div>
-    <button
-      class="block w-fit px-3 py-1 font-semibold bg-gray-100 text-black hover:bg-js hover:border-js text-base border rounded-lg transition-colors"
-      >Enviar mensaje</button
-    >
+    <div class="items-center gap-4">
+      <button
+        id="send-email"
+        disabled
+        class="block w-fit px-3 py-1 font-semibold bg-gray-100 text-black hover:bg-js hover:border-js text-base border rounded-lg transition-colors disabled:bg-slate-500 disabled:border-slate-500 disabled:text-gray-400"
+        >Enviar mensaje</button
+      >
+      <span id="success-msj" class="text-js hidden">Mensaje enviado</span>
+    </div>
   </form>
 </section>
 <script>
+  const EMAIL_REGEX = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
   const email = document.querySelector("#email-address");
   const emailSpan = document.querySelector("#email-address+span");
+
   const name = document.querySelector("#name");
+  const nameSpan = document.querySelector("#name+span");
+
   const subject = document.querySelector("#subject");
+  const subjectSpan = document.querySelector("#subject+span");
+
   const message = document.querySelector("#message");
-  let regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-  email.addEventListener("blur", () => {
-    console.log("hola");
-    emailSpan.classList.add("hidden");
-  });
-  email.addEventListener("input", () => {
-    if (!regexEmail.test(email.value)) {
+  const messageSpan = document.querySelector("#message+span");
+
+  const btnSubmit = document.querySelector("#send-email");
+  const successSpan = document.querySelector("#success-msj");
+
+  btnSubmit.addEventListener("click", handleClick);
+
+  email.addEventListener("blur", hideErrorSpan);
+  name.addEventListener("blur", hideErrorSpan);
+  subject.addEventListener("blur", hideErrorSpan);
+  message.addEventListener("blur", hideErrorSpan);
+
+  email.addEventListener("input", validateEmail);
+  name.addEventListener("input", () => validateInput(name, 51, nameSpan));
+  subject.addEventListener("input", () =>
+    validateInput(subject, 51, subjectSpan)
+  );
+  message.addEventListener("input", () =>
+    validateInput(message, 301, messageSpan)
+  );
+
+  function hideErrorSpan() {
+    this.nextElementSibling.classList.add("hidden");
+  }
+
+  function validateEmail() {
+    if (!EMAIL_REGEX.test(email.value)) {
       email.classList.remove("focus:border-js");
       email.classList.add("focus:border-red-500");
       emailSpan.classList.remove("hidden");
@@ -76,5 +110,33 @@
       email.classList.add("focus:border-js");
       emailSpan.classList.add("hidden");
     }
-  });
+    checkFormValidity();
+  }
+
+  function validateInput(inputElement, maxLength, errorSpanElement) {
+    if (inputElement.value.length > maxLength) {
+      inputElement.classList.remove("focus:border-js");
+      inputElement.classList.add("focus:border-red-500");
+      errorSpanElement.classList.remove("hidden");
+    } else {
+      inputElement.classList.remove("focus:border-red-500");
+      inputElement.classList.add("focus:border-js");
+      errorSpanElement.classList.add("hidden");
+    }
+    checkFormValidity();
+  }
+  function checkFormValidity() {
+    if (email.value && name.value && subject.value && message.value) {
+      btnSubmit.disabled = false;
+    } else {
+      btnSubmit.disabled = true;
+    }
+  }
+  function handleClick(e) {
+    e.preventDefault();
+    successSpan.classList.remove("hidden");
+    setTimeout(() => {
+      successSpan.classList.add("hidden");
+    }, 1500);
+  }
 </script>
