@@ -1,0 +1,49 @@
+---
+import Alura from "./logos/Alura.astro";
+import Certificate from "./icons/Certificate.astro";
+import FreeCodeCamp from "./logos/FreeCodeCamp.astro";
+---
+
+<section class="flex flex-col w-full max-w-5xl mx-auto pt-24">
+  <h3 class="text-3xl font-medium text-left mb-10 capitalize text-js">
+    Formación
+  </h3>
+  <ul class="grid grid-cols-box-xl gap-6">
+    <li class="bg-[#1D1A2D] p-4 rounded flex flex-col justify-end gap-4">
+      <div class="m-auto">
+        <Alura />
+      </div>
+      <div class="flex flex-col h-[140px] justify-between">
+        <h4 class="text-2xl font-semibold">Formación en Front-End</h4>
+        <div class="flex flex-col gap-2">
+          <p class="text-lg">2023 Alura Latam</p>
+          <a
+            class="[&>svg>path]:hover:fill-js [&>svg]:w-8 [&>svg>path]:fill-gray-100 block w-fit"
+            href="https://app.aluracursos.com/user/sta-vla411/fullCertificate/cc42edd0b0cef4cbf77c72acc4e5f293"
+            target="_blank"
+          >
+            <Certificate /></a
+          >
+        </div>
+      </div>
+    </li>
+    <li class="bg-[#1D1A2D] p-4 rounded flex flex-col justify-end gap-4">
+      <div class="m-auto">
+        <FreeCodeCamp />
+      </div>
+      <div class="flex flex-col h-[140px] justify-between">
+        <h4 class="text-2xl font-semibold">Front-End Development Libraries</h4>
+        <div class="flex flex-col gap-2">
+          <p class="text-lg">2022 FreeCodeCamp</p>
+          <a
+            class="[&>svg>path]:hover:fill-js [&>svg]:w-8 [&>svg>path]:fill-gray-100 block w-fit"
+            href="https://www.freecodecamp.org/certification/fcc88826670-56ee-470e-b89e-822ee5efc649/front-end-development-libraries"
+            target="_blank"
+          >
+            <Certificate /></a
+          >
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
