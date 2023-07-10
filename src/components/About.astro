@@ -5,14 +5,14 @@ import Linkedin from "./logos/Linkedin.astro";
 
 <section
   id="about"
-  class="flex gap-7 justify-center h-screen w-full max-w-5xl mx-auto md:flex-wrap-reverse md:gap-2 sm:justify-start"
+  class="flex gap-7 justify-center h-screen w-full max-w-5xl mx-auto md:flex-wrap-reverse md:gap-2 sm:justify-start md:mt-12 md:h-auto"
 >
   <div class="flex flex-col gap-5 justify-center">
     <header class="flex justify-start flex-col gap-1">
-      <h1 class="text-6xl font-bold">Stalin Acurio</h1>
-      <span class="text-4xl text-js font-medium">Front-End Developer</span>
+      <h1 class="text-6xl md:text-5xl font-bold">Stalin Acurio</h1>
+      <span class="text-4xl md:text-3xl text-js font-medium">Front-End Developer</span>
     </header>
-    <p class="text-lg tex max-w-[60ch]">
+    <p class="text-lg md:text-base tex max-w-[60ch]">
       Me encanta explorar el mundo del desarrollo web y experimentar con
       tecnologías modernas para construir interfaces intuitivas y visualmente
       atractivas.
@@ -36,7 +36,7 @@ import Linkedin from "./logos/Linkedin.astro";
       </li>
     </ul>
   </div>
-  <div class="m-auto">
-    <img src="home.png" alt="" />
+  <div class="m-auto flex justify-center">
+    <img class="md:max-w-[80%] " src="home.png" alt="" />
   </div>
 </section>
