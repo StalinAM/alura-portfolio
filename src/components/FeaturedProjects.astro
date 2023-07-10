@@ -20,12 +20,12 @@ const { id, title, image, description, tools, web, repo } = Astro.props;
     >
       <header class="mb-5">
         <a class="inline-block relative" href={web} target="_blank">
-          <h3 class="cursor-pointer text-4xl font-medium hover:text-js">
+          <h3 class="cursor-pointer text-4xl font-medium hover:text-js md:text-3xl">
             {title}
           </h3>
         </a>
       </header>
-      <div class="relative bg-[#1D1A2D] p-6 rounded text-lg text-gray-200 z-30">
+      <div class="relative bg-[#1D1A2D] p-6 rounded text-lg md:text-base text-gray-200 z-30">
         <p>{description}</p>
       </div>
       <footer
