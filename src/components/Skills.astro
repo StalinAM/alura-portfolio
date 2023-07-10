@@ -1,13 +1,13 @@
 ---
 const {title} = Astro.props
 ---
-<section id="skills" class="flex flex-col w-full max-w-5xl mx-auto pt-24">
+<section id="skills" class="flex flex-col w-full max-w-5xl mx-auto pt-24 sm:pt-12">
   <h3 id="title" class="text-3xl font-medium text-left mb-10 capitalize text-js">{title}</h3>
   { title === "habilidades" ? 
-    <ul class="flex flex-wrap gap-8 [&>li>svg]:w-14 [&>li>svg]:h-14 pb-5">
+    <ul class="flex flex-wrap gap-8 [&>li>svg]:w-14 [&>li>svg]:h-14 pb-5 ">
       <!-- HTML -->
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center text-base font-semibold text-js flex group gap-x-2"
       >
         <svg
           viewBox="0 0 24 24"
@@ -24,7 +24,7 @@ const {title} = Astro.props
       </li>
       <!-- CSS -->
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center  text-base font-semibold text-js md:flex group gap-x-2"
       >
         <svg
           viewBox="0 0 24 24"
@@ -58,7 +58,7 @@ const {title} = Astro.props
       </li>
       <!-- React -->
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center  text-base font-semibold text-js md:flex group gap-x-2"
       >
         <svg
           viewBox="0 0 24 24"
@@ -75,7 +75,7 @@ const {title} = Astro.props
       </li>
       <!-- Next.js -->
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center  text-base font-semibold text-js md:flex group gap-x-2"
       >
         <svg
           viewBox="0 0 24 24"
@@ -92,7 +92,7 @@ const {title} = Astro.props
       </li>
       <!-- Astro -->
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center  text-base font-semibold text-js md:flex group gap-x-2"
       >
         <svg
           viewBox="0 0 1280 1280"
@@ -116,7 +116,7 @@ const {title} = Astro.props
       </li>
       <!-- Tailwind -->
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center  text-base font-semibold text-js md:flex group gap-x-2"
       >
         <svg
           viewBox="0 0 24 24"
@@ -133,7 +133,7 @@ const {title} = Astro.props
       </li>
       <!-- Git -->
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center  text-base font-semibold text-js md:flex group gap-x-2"
       >
         <svg
           viewBox="0 0 24 24"
@@ -148,7 +148,7 @@ const {title} = Astro.props
       </li>
       <!-- Firebase -->
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center  text-base font-semibold text-js md:flex group gap-x-2"
       >
         <svg
           viewBox="0 0 128 128"
@@ -166,7 +166,7 @@ const {title} = Astro.props
     :
     <ul class="flex flex-wrap gap-8 [&>li>svg]:w-12 [&>li>svg]:h-12 pb-5">
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center  text-base font-semibold text-js md:flex group gap-x-2"
       >
         <svg  viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="fill-gray-100 group-hover:fill-js" d="M7.79999 13.7866L11.5733 10.0133L2.21332 0.66661C0.13332 2.74661 0.13332 6.11994 2.21332 8.21328L7.79999 13.7866ZM16.84 11.3733C18.88 12.3199 21.7467 11.6533 23.8667 9.53328C26.4133 6.98661 26.9067 3.33328 24.9467 1.37328C23 -0.57339 19.3467 -0.09339 16.7867 2.45328C14.6667 4.57328 14 7.43994 14.9467 9.47994L1.93332 22.4933L3.81332 24.3733L13 15.2133L22.1733 24.3866L24.0533 22.5066L14.88 13.3333L16.84 11.3733Z" fill="#2A7AE4"/>
@@ -177,7 +177,7 @@ const {title} = Astro.props
         >
       </li>
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center text-base font-semibold text-js md:flex group gap-x-2"
       >
       <svg viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path class="fill-gray-100 group-hover:fill-js" d="M27 0H2.99998C1.53331 0 0.333313 1.2 0.333313 2.66667V18.6667C0.333313 20.1333 1.53331 21.3333 2.99998 21.3333H9.66665V24H20.3333V21.3333H27C28.4666 21.3333 29.6533 20.1333 29.6533 18.6667L29.6666 2.66667C29.6666 1.2 28.4666 0 27 0ZM27 18.6667H2.99998V2.66667H27V18.6667Z" fill="#2A7AE4"/>
@@ -188,7 +188,7 @@ const {title} = Astro.props
       >
       </li>
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center  text-base font-semibold text-js md:flex group gap-x-2"
       >
       <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path class="fill-gray-100 group-hover:fill-js"  d="M12 0C5.37333 0 0 5.37333 0 12V21.3333C0 22.8 1.2 24 2.66667 24H8V13.3333H2.66667V12C2.66667 6.84 6.84 2.66667 12 2.66667C17.16 2.66667 21.3333 6.84 21.3333 12V13.3333H16V24H21.3333C22.8 24 24 22.8 24 21.3333V12C24 5.37333 18.6267 0 12 0Z" fill="#2A7AE4"/>
@@ -200,7 +200,7 @@ const {title} = Astro.props
       >
       </li>
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center text-base font-semibold text-js md:flex group gap-x-2"
       >
       <svg viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path class="fill-gray-100 group-hover:fill-js" d="M33.375 2.4375L31.5625 0.625C31.1875 0.25 30.6875 0 30.125 0C29.5625 0 29.0625 0.25 28.6875 0.625L25.8125 3.5C25.5625 3.75 25.375 4.0625 25.25 4.375L24.5 6.625L19.75 11.4375C19 10.875 18.1875 10.4375 17.25 10.25C15.125 9.75 13.0625 10.1875 11.625 11.625C11.0625 12.1875 10.625 12.875 10.375 13.6875C10 14.875 8.9375 15.75 7.75 15.875C6.25 16 4.875 16.5625 3.8125 17.625C0.9375 20.4375 1.5 25.5625 4.9375 29.0625C8.4375 32.5 13.5625 33 16.375 30.1875C17.4375 29.125 18 27.75 18.1875 26.25C18.25 25.0625 19.125 24 20.3125 23.625C21.125 23.375 21.8125 22.9375 22.375 22.375C23.8125 20.9375 24.25 18.875 23.75 16.75C23.5625 15.875 23.125 15 22.5625 14.25L27.375 9.5L29.625 8.75C29.9375 8.625 30.25 8.4375 30.5 8.1875L33.375 5.3125C33.75 4.9375 33.9375 4.4375 33.9375 3.875C33.9375 3.3125 33.75 2.8125 33.375 2.4375ZM15 22C13.3125 22 12 20.6875 12 19C12 17.375 13.3125 16 15 16C16.625 16 18 17.375 18 19C18 20.6875 16.625 22 15 22Z" fill="#2A7AE4"/>
@@ -211,7 +211,7 @@ const {title} = Astro.props
       >
       </li>
       <li
-        class="flex-col items-center justify-center hidden text-base font-semibold text-js md:flex group gap-x-2"
+        class="flex-col items-center justify-center text-base font-semibold text-js md:flex group gap-x-2"
       >
       <svg viewBox="0 0 23 31" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path class="fill-gray-100 group-hover:fill-js"  d="M13.3333 3.00004C13.3333 1.53337 14.5333 0.333374 16 0.333374C17.4667 0.333374 18.6667 1.53337 18.6667 3.00004C18.6667 4.46671 17.4667 5.66671 16 5.66671C14.5333 5.66671 13.3333 4.46671 13.3333 3.00004ZM5.66667 29C5.12 29 4.66667 29.4534 4.66667 30C4.66667 30.5467 5.12 31 5.66667 31C6.21333 31 6.66667 30.5467 6.66667 30C6.66667 29.4534 6.21333 29 5.66667 29ZM17 29C16.4533 29 16 29.4534 16 30C16 30.5467 16.4533 31 17 31C17.5467 31 18 30.5467 18 30C18 29.4534 17.5467 29 17 29ZM21.6533 24.3334C21.3333 24.3334 21.0533 24.48 20.8667 24.7334C20.1333 25.7067 18.9733 26.3334 17.6667 26.3334H17.3333V18.3334L11.5733 14.7734L13.9733 10.92C15.5067 13.3734 18.24 15 21.3333 15V12.3334C18.8667 12.3334 16.7467 10.84 15.8267 8.70671L15.1333 7.09337C14.88 6.52004 14.1467 5.66671 12.9333 5.66671H5.33333L2 11L4.26667 12.4134L6.8 8.33337H9.93333L6.73333 13.4534C6.32 14.12 6.21333 14.9334 6.45333 15.68L8.24 21.2134L4.08 26.2267C3.14667 26.0134 2.34667 25.4667 1.8 24.7334C1.61333 24.48 1.32 24.3334 1 24.3334C0.413333 24.3334 0 24.8134 0 25.3334C0 25.5334 0.0666668 25.7467 0.2 25.9334C1.29333 27.4 3.04 28.3334 5 28.3334H17.6667C19.6267 28.3334 21.3733 27.4 22.4667 25.9334C22.6 25.7467 22.6667 25.5334 22.6667 25.3334C22.6667 24.8134 22.24 24.3334 21.6533 24.3334ZM14.6667 26.3334H7.46667L11.3333 21.6667L10 17.2667L14.6667 20.2V26.3334Z" fill="#2A7AE4"/>
