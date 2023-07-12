@@ -1,54 +1,73 @@
-# Astro Starter Kit: Basics
+# Portafolio - Challenge ONE Front-end Sprint
 
-```
-npm create astro@latest -- --template basics
-```
+![](./public/desktop.webp)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+El objetivo de este reto es crear un portafolio donde pueda mostrar mis proyectos, experiencia y contar un poco sobre quién soy. Así, ejercitar aún más mis conocimientos de HTML, CSS y Javascript.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Table of contents
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+- [Portafolio - Challenge ONE Front-end Sprint](#portafolio---challenge-one-front-end-sprint)
+  - [Table of contents](#table-of-contents)
+  - [Resumen](#resumen)
+    - [Requisitos del desafío](#requisitos-del-desafío)
+    - [Enlaces](#enlaces)
+    - [Construido con:](#construido-con)
+  - [Author](#author)
 
-## 🚀 Project Structure
+## Resumen
 
-Inside of your Astro project, you'll see the following folders and files:
+### Requisitos del desafío
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Debe tener un menú de navegación.
+Debe tener una imagen que se utilizará como banner.
+Debe contener una sección sobre mí.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Debe tener una foto de perfil.
+Debe incluir enlaces a sus redes sociales.
+Debe tener sus datos personales:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+ - Nombre
+ - Edad
+ - Nacionalidad
+ - Biografía
+Debe tener una sección de Hobbies y Soft Skills
+Por ejemplo:
+Pasatiempos: actividades que disfruta hacer.
+Habilidades blandas: comunicación, liderazgo, empatía …
 
-Any static assets, like images, can be placed in the `public/` directory.
+Debe tener una sección de formación y cursos.
+Aquí puedes poner las formaciones y cursos que has realizado, aunque no esté en el área de programación.
+Debe tener experiencia en la sección de programación.
+Aquí puedes poner los proyectos que ya has realizado anteriormente, como por ejemplo: los proyectos del retador principiante en programación.
+Debe tener un formulario de contacto con los siguientes campos
+   -  Correo electrónico
+   - Nombre
+   - Asunto
+   -  Mensaje
+Debe tener un Pie de página con la información de la persona que desarrolló el portafolio.
+Es de extrema importancia que el portafolio sea responsivo, lo que quiere decir que debe adaptarse a los diferentes tamaños de pantallas, pudiendo ser desktop, tablet o celular.
+Importante: Todas las imagenes estaran disponible en el Figma para hacer descarga.
 
-## 🧞 Commands
+Extras:
+- La página debe contener un botón que le permita ver, en una nueva pestaña, una versión PDF de su currículum.
 
-All commands are run from the root of the project, from a terminal:
+### Enlaces
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Solución URL: [Github](https://github.com/StalinAM/alura-portfolio.git)
+- Sítio en línea URL: [SVAM Potafolio](https://svam-alura.netlify.app/)
 
-## 👀 Want to learn more?
+### Construido con:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- JavaScript
+- [Astro](https://astro.build/)
+- [Tailwind](https://tailwindcss.com/)
+- [Netlify](https://www.netlify.com/)
+
+## Author
+
+- GitHub - [StalinAM](https://github.com/StalinAM)
+- ONE – Oracle Next Education - [Oracle](https://www.oracle.com/lad/education/oracle-next-education/)
+- Alura LATAM - [Alura](https://www.aluracursos.com/)
