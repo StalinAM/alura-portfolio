@@ -54,7 +54,7 @@ Extras:
 ### Enlaces
 
 - Solución URL: [Github](https://github.com/StalinAM/alura-portfolio.git)
-- Sítio en línea URL: [SVAM Potafolio](https://svam-alura.netlify.app/)
+- Sitio en línea URL: [SVAM Potafolio](https://svam-alura.netlify.app/)
 
 ### Construido con:
 
